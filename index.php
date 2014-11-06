@@ -41,8 +41,8 @@
     			</div>
     			<div class="col-md-2"></div>
     			<div class="col-sm-12">
-    				<video>
-    					<source src="gource.webm"></srouce>
+    				<video width="720" controls autobuffer>
+    					<source src="gource.webm" type="video/webm"></srouce>
     				</video>
     			</div>
     	</div>
