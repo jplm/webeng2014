@@ -35,7 +35,13 @@
     	</div>
     	<div tabindex="0">
     		<h3>Wikipedia:</h3>
-    		<p><a tabindex="0" href="http://de.wikipedia.org/wiki/Wikipedia:Hauptseite">Wikipedia</a></p>
+    		<form class="input-group" action="http://de.wikipedia.org/wiki/Spezial:Suche">
+    			<input type="text" class="form-control" name="search" value="">
+    			<span class="input-group-btn">
+    				<button class="btn btn-default" type="submit" name="go" value="Artikel">Go!</button>
+    				<button class="btn btn-default" type="submit" name="fulltext" value="Volltext">Vollltext!</button>
+    			</span>
+    		</form<!-- /input-group -->
     	</div>
     </article>
     <footer tabindex="0" class="container">
