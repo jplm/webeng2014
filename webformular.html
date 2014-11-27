@@ -40,10 +40,12 @@
   		<header class="container">
   			<h1 tabindex="0">Internetbasierte Systeme</h1>
   			<p tabindex="0" class="lead">Barrierefreies Suchformular</p>
-  		</header>
+  			<form action="http://de.wikipedia.org/wiki/Spezial:Suche">
+    	</form>
   	</div>
+  		</header>
   	<article class="container">
-    		<label for="wikipedia">Wikipedia</label>
+    		<!--<label for="wikipedia">Wikipedia</label>
     		<form class="input-group" id="wikipedia" action="http://de.wikipedia.org/wiki/Spezial:Suche">
     			<input type="text" class="form-control" name="search" value="">
     			<span class="input-group-btn">
@@ -54,7 +56,15 @@
     	</section>
     	<div>
     		<a href="http%3A%2F%2Fjulianpascalmartin3.cloudcontrolled.com%2Fwebformular">Test</a>
-    	</div>
+    	</div>-->
+    	<form action="http://de.wikipedia.org/wiki/Spezial:Suche">
+    		<fieldset>
+    			<legend>Suchen</legend>
+    			<input type="text"   name="search" value="" />
+    			<input type="submit" name="go" value="Artikel"/>
+    			<input type="submit" name="fulltext" value="Volltext" />
+    		</fieldset>
+    	</form>
     </article>
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
