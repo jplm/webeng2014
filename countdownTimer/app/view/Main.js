@@ -22,7 +22,7 @@ var myAudio = {
 	xtype: 'audio',
 	hidden: true,
 	id: 'sound1',
-	url: 'audio/crash.mp3'
+	url: 'audio/Alarm Alert Effect-SoundBible.com-462520910.mp3'
 };
 var startButton = Ext.create('Ext.Button', {
 	text: 'Start',
