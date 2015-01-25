@@ -30,7 +30,7 @@ var startButton = Ext.create('Ext.Button', {
 	handler: function () {
 		i = spinner.getValue();
 		startButton.setText("Noch "+i+" Minuten");
-		minInterval = setInterval(function(){ changer(); }, 1000);
+		minInterval = setInterval(function(){ changer(); }, 60000);
 		startButton.disable();
 		}
 });
