@@ -1,11 +1,16 @@
 $(document).ready(function() {
-	$("#myForm").validate({
+	$('#myForm').validate({
     rules: {
         search: {
-            minlength: 1,
-            maxlength: 50,
-            required: true
+            required: true,
+            maxlength: 50
         }
-    }
+    },
+    messages: {
+				search: {
+					required: 'Das Suchfeld darf nicht leer sein!',
+					maxlength: 'Der Suchtext darf Maximal 50 Zeichen lang sein'
+				}
+			}
     });
 });
