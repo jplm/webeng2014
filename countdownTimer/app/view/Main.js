@@ -4,7 +4,7 @@ var changer = function() {
 	i--;
 	startButton.setText("Noch "+i+" Minuten");
 	if(i <= 0) {
-		startButton.setText("Die Zeit ist vorrüber");
+		startButton.setText("Die Zeit ist vorüber");
 		clearInterval(minInterval);
 		Ext.getCmp('sound1').play();
 		cancelButton.setText("OK");
