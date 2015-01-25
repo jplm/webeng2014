@@ -1,5 +1,8 @@
 $(document).ready(function() {
 	$('#myForm').validate({
+		errorPlacement: function(error, element) {
+			$(element).closest( "form" ).append(error);
+		},
     rules: {
         search: {
             required: true,
