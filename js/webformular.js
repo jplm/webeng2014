@@ -1,6 +1,11 @@
 $(document).ready(function() {
-	//$('.jumbotron').draggable();
-	$('form').validate({
-		debug: true
-	});
+	$("#myForm").validate({
+    rules: {
+        search: {
+            minlength: 1,
+            maxlength: 50,
+            required: true
+        }
+    }
+    });
 });
