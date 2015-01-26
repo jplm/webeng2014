@@ -1,7 +1,7 @@
 var i;
 var minInterval;
 var changer = function() {
-	if(i > 1) startButton.setText("Noch "+i+" Minuten");
+	if(i > 1) startButton.setText("Noch < "+i+" Minuten");
 	if(i == 1) startButton.setText("Letzte Minute!");
 	if(i <= 0) {
 		startButton.setText("Die Zeit ist vorüber");
