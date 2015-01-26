@@ -2,11 +2,13 @@ var i;
 var minInterval;
 var changer = function() {
 	startButton.setText(String("0" + Math.floor(i/60)).slice(-2)+':'+String("0" + i % 60).slice(-2));
-	if(i < 0) {
-		startButton.setText("Die Zeit ist vorüber");
-		clearInterval(minInterval);
+	if(i == 0) {
 		Ext.getCmp('alarmSound').play();
+	}
+	if(i == -1) {
+		startButton.setText("Die Zeit ist vorüber");
 		cancelButton.setText("OK");
+		clearInterval(minInterval);
 	}
 	i--;
 };
