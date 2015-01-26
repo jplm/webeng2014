@@ -1,9 +1,8 @@
 var i;
 var minInterval;
 var changer = function() {
-	if(i > 1) startButton.setText("Noch < "+i+" Minuten");
-	if(i == 1) startButton.setText("Letzte Minute!");
-	if(i <= 0) {
+	startButton.setText(String("0" + Math.floor(i/60)).slice(-2)+':'+String("0" + i % 60).slice(-2));
+	if(i < 0) {
 		startButton.setText("Die Zeit ist vorüber");
 		clearInterval(minInterval);
 		Ext.getCmp('alarmSound').play();
@@ -29,10 +28,10 @@ var startButton = Ext.create('Ext.Button', {
 	text: 'Start',
 	ui: 'action',
 	handler: function () {
-		i = spinner.getValue();
+		i = spinner.getValue()*60;
 		//startButton.setText("Noch "+i+" Minuten");
 		changer();
-		minInterval = setInterval(function(){ changer(); }, 60000);
+		minInterval = setInterval(function(){ changer(); }, 1000);
 		startButton.disable();
 		}
 });
