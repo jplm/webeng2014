@@ -6,7 +6,7 @@ var changer = function() {
 	if(i <= 0) {
 		startButton.setText("Die Zeit ist vorüber");
 		clearInterval(minInterval);
-		Ext.getCmp('sound1').play();
+		Ext.getCmp('alarmSound').play();
 		cancelButton.setText("OK");
 	}
 };
@@ -21,7 +21,7 @@ var spinner = Ext.create('Ext.field.Spinner', {
 var myAudio = {
 	xtype: 'audio',
 	hidden: true,
-	id: 'sound1',
+	id: 'alarmSound',
 	url: 'audio/Alarm Alert Effect-SoundBible.com-462520910.mp3'
 };
 var startButton = Ext.create('Ext.Button', {
@@ -44,7 +44,7 @@ var cancelButton = Ext.create('Ext.Button', {
 		setCancelButton();
 		clearInterval(minInterval);
 		startButton.setText("Start");
-		Ext.getCmp('sound1').stop();
+		Ext.getCmp('alarmSound').stop();
 		startButton.enable();
 		}
 	});
