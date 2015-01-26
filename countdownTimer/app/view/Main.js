@@ -1,14 +1,15 @@
-var i = 2;
+var i;
 var minInterval;
 var changer = function() {
-	i--;
-	startButton.setText("Noch "+i+" Minuten");
+	if(i > 1) startButton.setText("Noch "+i+" Minuten");
+	if(i == 1) startButton.setText("Letzte Minute!");
 	if(i <= 0) {
 		startButton.setText("Die Zeit ist vorüber");
 		clearInterval(minInterval);
 		Ext.getCmp('alarmSound').play();
 		cancelButton.setText("OK");
 	}
+	i--;
 };
 var spinner = Ext.create('Ext.field.Spinner', {
     label: 'Zeit in Minuten:',
@@ -29,7 +30,8 @@ var startButton = Ext.create('Ext.Button', {
 	ui: 'action',
 	handler: function () {
 		i = spinner.getValue();
-		startButton.setText("Noch "+i+" Minuten");
+		//startButton.setText("Noch "+i+" Minuten");
+		changer();
 		minInterval = setInterval(function(){ changer(); }, 60000);
 		startButton.disable();
 		}
