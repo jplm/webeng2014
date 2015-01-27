@@ -6,7 +6,7 @@ var changer = function() {
 		Ext.getCmp('alarmSound').play();
 	}
 	if(i == -1) {
-		startButton.setText("Die Zeit ist vorüber");
+		startButton.setText("Die Zeit ist vorüber!");
 		cancelButton.setText("OK");
 		clearInterval(minInterval);
 	}
