@@ -67,7 +67,38 @@ var cancelButton = Ext.create('Ext.Button', {
 				spinner,
 				startButton,
 				cancelButton,
-				myAudio
+				myAudio,
+				{
+				xtype: 'toolbar',
+				docked: 'bottom',
+				title: '',
+				layout: {
+					pack: 'center'
+					},
+				items: [
+					{
+					xtype: 'button',
+					text: 'Home',
+					handler: function(){
+						window.open("/index.html");
+						}
+					},
+					{
+					xtype: 'button',
+					text: 'Impressum',
+					handler: function(){
+						window.open("/impressum.html");
+						}
+					},
+					{
+					xtype: 'button',
+					text: 'Datenschutz',
+					handler: function(){
+						window.open("/datenschutz.html");
+						}
+					}
+					]
+				}
             ]
     }
 });
