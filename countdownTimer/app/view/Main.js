@@ -85,16 +85,16 @@ var cancelButton = Ext.create('Ext.Button', {
 					},
 					{
 					xtype: 'button',
-					text: 'Impressum',
+					text: 'Datenschutz',
 					handler: function(){
-						window.open("/impressum.html");
+						window.open("/datenschutz.html");
 						}
 					},
 					{
 					xtype: 'button',
-					text: 'Datenschutz',
+					text: 'Impressum',
 					handler: function(){
-						window.open("/datenschutz.html");
+						window.open("/impressum.html");
 						}
 					}
 					]
